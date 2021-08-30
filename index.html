@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5 Practico 2</title>
+    <style>
+        body li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Agregar Libro</h1>
+
+    <form id="form" action="" method="#">
+        <p>Nombre: <input id="nombre" type="text" name="name"></p>
+        <p>Etiquetas: <input id="labels" type="text" name="label"></p>
+        <p>Autor: <input id="autor" type="text" name="author"></p>
+        <p>Genero: <input id="genero" type="text" name="gender"></p>
+        <p>En stock:
+            <input type="radio" name="stock" value="true"> Sí
+            <input type="radio" name="stock" value="false"> No
+        </p>
+        <p>Precio: <input id="precio" type="number" name="price" min="0" pattern="[0-9]{10}"
+                onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false;"></p>
+        <p>Páginas: <input id="pag" type="number" name="pages" min="0" pattern="[0-9]{10}"
+                onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false;"></p>
+
+
+        <input id="btnAdd" type="button" value="Agregar">
+        <input id="btnReset" type="reset" value="Restaurar formulario">
+        <br>
+        <br>
+        <input id="btnLibros" type="button" value="Ver todos los libros">
+        <p>Buscar mayor al precio: <input id="precioMayor" type="number" min="0" pattern="[0-9]{10}"
+                onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false;"><input id="btnPrice"
+                type="button" value="Buscar">
+        <p>Buscar por etiqueta: <input id="etiqueta" type="text"><input id="btnLabel" type="button" value="Buscar">
+
+        </p>
+
+    </form>
+
+    <br>
+
+    <br>
+    <div id="caja"></div>
+
+
+    <script src="ejercicio5.js"></script>
+</body>
+
+</html>
